@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>TestCafe Sample</title>
+  <script type="text/babel">
+
+    class Form extends React.Component {
+
+      constructor() {
+        super()
+        this.state = {
+          submitted: false,
+        }
+      }
+
+      render() {
+        return (
+          <div>
+            <div>
+              <label for="name">Name:</label>
+              <input type="text" name="name" disabled={this.state.submitted} />
+            </div>              
+            <div>
+              <label for="email">Email:</label>
+              <input type="email" name="email" disabled={this.state.submitted} />
+            </div>
+            <button onClick={() => this.setState({submitted: true})} class="btn">Abschicken</button>
+          </div>
+        )
+      }
+    
+    }
+
+
+    ReactDOM.render(<Form />, document.querySelector('#form'));
+
+  </script>
+</head>
+<body>
+  <h1>Dies ist er Titel</h1>
+  <div id="form"></div>
+  <div class="main">
+    <p class="intro">
+      Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula
+      eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient
+      montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque
+      eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo,
+      fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut,
+      imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium.
+      Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate
+      eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac,
+      enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus
+      viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet. Etiam
+      ultricies nisi vel augue.          
+    </p>      
+    <div>
+        <label for="email">Main Email:</label>
+        <input type="email" name="email" />
+    </div>              
+    <p>
+      Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula
+      eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient
+      montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque
+      eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo,
+      fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut,
+      imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium.
+      Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate
+      eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac,
+      enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus
+      viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet. Etiam
+      ultricies nisi vel augue.          
+    </p>      
+    <p>
+        Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula
+        eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient
+        montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque
+        eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo,
+        fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut,
+        imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium.
+        Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate
+        eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac,
+        enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus
+        viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet. Etiam
+        ultricies nisi vel augue.          
+      </p>      
+    </div>
+    <script src="https://unpkg.com/react@16/umd/react.production.min.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@16/umd/react-dom.production.min.js" crossorigin></script>
+    <script src="https://d3js.org/d3.v5.min.js"></script>
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/lodash@4.17.11/lodash.min.js"></script>
+</body>
+</html>

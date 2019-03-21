@@ -1,0 +1,31 @@
+{
+  "name": "republik-tests",
+  "version": "1.0.0",
+  "description": "End-to-end testing of the Republik web presence",
+  "main": "index.js",
+  "scripts": {
+    "test": "testcafe chrome tests/**/*.js",
+    "test:mobile": "testcafe 'chrome:headless:emulation:device=iPhone 5/SE' tests/**/*.js",
+    "test:mac": "testcafe chrome tests/**/*.js",
+    "test:win": "testcafe firefox,chrome,ie tests/**/*.js",
+    "test:remote": "testcafe remote tests/**/*.js --qr-code",
+    "test:ios": "node run-mobile.js ios",
+    "test:android": "node run-mobile.js android",
+    "test:sample": "testcafe chrome sample/tests.js",
+    "debug": "testcafe $NODE_DEBUG_OPTION chrome"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/orbiting/republik-tests.git"
+  },
+  "author": "Andreas Moor <andreas.moor@republik.ch>",
+  "license": "BSD-3-Clause",
+  "bugs": {
+    "url": "https://github.com/orbiting/republik-tests/issues"
+  },
+  "homepage": "https://github.com/orbiting/republik-tests#readme",
+  "dependencies": {
+    "testcafe": "^1.1.0",
+    "testcafe-react-selectors": "^3.1.0"
+  }
+}

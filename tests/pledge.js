@@ -12,7 +12,7 @@ test('Abo kaufen', async t => {
   const values = {
     firstName: 'Hans',
     lastName: 'Muster',
-    email: `hmuster+${Date.now()}@gmail.com`,
+    email: `hans.muster+${Date.now()}@republik.ch`,
     'cc-number': '4242 4242 4242 4242',
     'cc-exp-month': '3',
     'cc-exp-year': '22',

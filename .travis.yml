@@ -36,6 +36,7 @@ env:
     - AUTO_LOGIN_REGEX=^([a-zA-Z0-9._%+-]+)@test\.project-r\.construction$
     - PARKING_PLEDGE_ID=00000000-1234-0000-0000-000000000001
     - PARKING_USER_ID=00000000-4321-0000-0000-000000000001
+    - DATABASE_URL=postgres://postgres@localhost:5432/republik-test
     # FRONTENDS
     - PUBLIC_BASE_URL=http://127.0.0.1:3010
     - API_URL=http://127.0.0.1:5000/graphql

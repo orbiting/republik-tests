@@ -8,7 +8,7 @@ cache:
 notifications:
   email: false
 addons:
-  postgresql: "10.7"
+  postgresql: "9.6"
   chrome: stable
 services:
   - elasticsearch

@@ -57,5 +57,3 @@ script:
   - scripts/install.sh
   - scripts/start.sh
   - npm run test
-  - echo "Backends LOG"; cat apps/backends/log
-  - echo "Frontend LOG"; cat apps/frontend/log

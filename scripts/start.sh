@@ -1,9 +1,9 @@
 
 cd apps/backends
-PORT=5000 SERVER=republik yarn start &
+{ PORT=5000 SERVER=republik yarn start & } 2>./log
 cd ../..
 cd apps/frontend
-npm run dev &
+{ npm run dev & } 2>./log
 cd ../..
 
-sleep 3
+sleep 10

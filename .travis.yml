@@ -1,0 +1,44 @@
+language: node_js
+cache:
+  directories:
+    - node_modules
+  yarn: true
+notifications:
+  email: false
+addons:
+  postgresql: "10.7"
+  chrome: stable
+services:
+  - elasticsearch
+  - postgresql
+  - redis-server
+branches:
+  only:
+  - master
+env:
+  global:
+    - NODE_ENV=development
+    - SEND_MAILS=false
+    - SEND_NOTIFICATIONS=false
+    - DEFAULT_MAIL_FROM_NAME='Travis E2E'
+    - DEFAULT_MAIL_FROM_ADDRESS='e2e@test.project-r.construction'
+    - LOCAL_ASSETS_SERVER=true
+    - ASSETS_SERVER_BASE_URL=http://localhost:5000
+    - AUTO_LOGIN_REGEX=^([a-zA-Z0-9._%+-]+)@test\.project-r\.construction$
+    - CROWDFUNDING_PLEDGE=TEST
+    - IGNORE_SSL_HOSTNAME=localhost
+    - PARKING_PLEDGE_ID=00000000-1234-0000-0000-000000000001
+    - PARKING_USER_ID=00000000-4321-0000-0000-000000000001
+before_install:
+  - curl -o- -L https://yarnpkg.com/install.sh | bash -s -- --version 1.7.0
+  - export PATH=$HOME/.yarn/bin:$PATH
+  - curl -O https://artifacts.elastic.co/downloads/elasticsearch/elasticsearch-6.3.0.deb && sudo dpkg -i --force-confnew elasticsearch-6.3.0.deb && sudo service elasticsearch restart
+before_script:
+  # Wait 10s for ElasticSearch
+  # see https://docs.travis-ci.com/user/database-setup/#ElasticSearch
+  # not needed since our setup takes more than 10s
+  # - sleep 10
+script:
+  - scripts/install.sh
+  - scripts/start.sh
+  - npm run test

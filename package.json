@@ -3,6 +3,9 @@
   "version": "1.0.0",
   "description": "End-to-end testing of the Republik web presence",
   "main": "index.js",
+  "engines": {
+    "node": "10.x"
+  },
   "scripts": {
     "test": "testcafe chrome:headless tests/**/*.js",
     "test:mobile": "testcafe 'chrome:headless:emulation:device=iPhone 5/SE' tests/**/*.js",

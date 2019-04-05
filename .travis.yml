@@ -53,7 +53,7 @@ before_script:
   # see https://docs.travis-ci.com/user/database-setup/#ElasticSearch
   # not needed since our setup takes more than 10s
   # - sleep 10
-script:
   - scripts/install.sh
   - scripts/start.sh
+script:
   - npm run test

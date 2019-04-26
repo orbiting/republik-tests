@@ -27,10 +27,10 @@ FRONTEND_BRANCH=${FRONTEND_BRANCH:-$BRANCH}
 
 if [ $(git ls-remote --heads $BACKENDS_REMOTE $BACKENDS_BRANCH | wc -l) == "0" ] ; then
   echo "[backends] ${BACKENDS_BRANCH} not available"
-  BACKENDS_BRANCH=DEFAULT_BRANCH ; fi
+  BACKENDS_BRANCH=$DEFAULT_BRANCH ; fi
 if [ $(git ls-remote --heads $FRONTEND_REMOTE $FRONTEND_BRANCH | wc -l) == "0" ] ; then
   echo "[frontend] ${FRONTEND_BRANCH} not available"
-  FRONTEND_BRANCH=DEFAULT_BRANCH ; fi
+  FRONTEND_BRANCH=$DEFAULT_BRANCH ; fi
 
 rm -rf apps
 

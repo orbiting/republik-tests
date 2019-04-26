@@ -49,5 +49,9 @@ The install script tries to fetch branches of the frontend and backend according
 If a branch is not available in a repo it will log it and use `master` instead. You can trigger a custom build on [travis-ci.com](https://travis-ci.com/orbiting/republik-tests) via more options and provide the branches with an custom config:
 
 ```
-env: FRONTEND_BRANCH=serie2 BACKENDS_BRANCH=serie2
+merge_mode: deep_merge
+env:
+  global:
+    FRONTEND_BRANCH: serie2
+    BACKENDS_BRANCH: serie2
 ```

@@ -5,10 +5,11 @@ setup_backends() {
   cd apps/backends
   yarn
   cp .env.example .env
-  cd servers/republik
-  cp .env.example .env
-  yarn test:prepare
-  cd ../..
+  cp servers/republik/.env.example servers/republik/.env
+  dropdb --if-exists republik-test
+  createdb republik-test
+  yarn run db:migrate:up
+  NODE_ENV=development OVERWRITE_ENV=.test.env yarn run db:seed
   cd ../..
 }
 setup_frontend() {

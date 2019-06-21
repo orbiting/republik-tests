@@ -33,7 +33,7 @@ env:
     DEFAULT_MAIL_FROM_NAME: 'Travis E2E'
     DEFAULT_MAIL_FROM_ADDRESS: 'e2e@test.project-r.construction'
     LOCAL_ASSETS_SERVER: true
-    AUTO_LOGIN_REGEX: ^([a-zA-Z0-9._%+-]+)@test\.project-r\.construction$
+    AUTO_LOGIN_REGEX: '^([a-zA-Z0-9._%+-]+)@test\.project-r\.construction$'
     PARKING_PLEDGE_ID: 00000000-1234-0000-0000-000000000001
     PARKING_USER_ID: 00000000-4321-0000-0000-000000000001
     DATABASE_URL: postgres://postgres@localhost:5432/republik-test
@@ -43,7 +43,7 @@ env:
     API_WS_URL: ws://127.0.0.1:5000/graphql
     CROWDFUNDING_PLEDGE: TEST
     # E2E
-    TARGET_URL: http://127.0.0.1:3010/
+    TARGET_URL: http://127.0.0.1:3010/feed
 before_install:
   - curl -o- -L https://yarnpkg.com/install.sh | bash -s -- --version 1.7.0
   - export PATH=$HOME/.yarn/bin:$PATH

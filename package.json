@@ -15,6 +15,7 @@
     "test:ios": "node run-mobile.js ios",
     "test:android": "node run-mobile.js android",
     "test:sample": "testcafe chrome sample/tests.js",
+    "testcafe": "testcafe",
     "debug": "testcafe $NODE_DEBUG_OPTION chrome"
   },
   "repository": {
@@ -28,7 +29,7 @@
   },
   "homepage": "https://github.com/orbiting/republik-tests#readme",
   "dependencies": {
-    "testcafe": "^1.9.2",
-    "testcafe-react-selectors": "^3.3.0"
+    "testcafe": "^1.14.2",
+    "testcafe-react-selectors": "^4.1.5"
   }
 }
